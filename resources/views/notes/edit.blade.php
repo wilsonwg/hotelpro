@@ -22,9 +22,12 @@
 
     @include('notes._form')
 
+
     {!! Form::close() !!}
 
-    {!! delete_form(['notes.destroy', $note->id]) !!}
+    {!! Form::model($note, ['url' => '/notes/'.$note->id, 'method'=> 'Delete' ]) !!}
+    {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
+    {!! Form::close() !!}
 
 </div>
 </div>

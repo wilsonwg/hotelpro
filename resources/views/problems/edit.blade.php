@@ -19,8 +19,9 @@
 
     {!! Form::close() !!}
 
-    {!! delete_form(['problems.destroy', $problem->id]) !!}
-
+    {!! Form::model($problem, ['url' => '/problems/'.$problem->id, 'method'=> 'Delete' ]) !!}
+    {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
+    {!! Form::close() !!}
 
 </div>
 

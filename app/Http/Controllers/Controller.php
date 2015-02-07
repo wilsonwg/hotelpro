@@ -14,7 +14,7 @@ abstract class Controller extends BaseController {
 
 	use DispatchesCommands, ValidatesRequests;
 
-	public function __construct(){
+	function __construct(){
 
 		$problem_count = count(problem::wherecase_status(1)->get());
 		$complain_count = count(complain::wherecase_status(1)->get());

@@ -24,7 +24,9 @@
 
     {!! Form::close() !!}
 
-    {!! delete_form(['we_checks.destroy', $we_check->id]) !!}
+    {!! Form::model($we_check, ['url' => '/we_checks/'.$we_check->id, 'method'=> 'Delete' ]) !!}
+    {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
+    {!! Form::close() !!}
 
 </div>
 </div>

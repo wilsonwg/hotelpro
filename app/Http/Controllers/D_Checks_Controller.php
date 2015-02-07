@@ -7,7 +7,29 @@ use App\d_check;
 use App\Inspector;
 use App\Http\Requests\CreateD_CheckRequest;
 
+
+use App\problem;
+use App\complain;
+use App\ToDo;
+use App\freezer;
+use App\rental;
+
+
 class D_Checks_Controller extends Controller {
+
+	public function __construct(){
+		$problem_count = count(problem::wherecase_status(1)->get());
+		$complain_count = count(complain::wherecase_status(1)->get());
+		$todo_count = count(ToDo::wherecase_status(1)->get());
+		$freezer_count = count(freezer::wherecase_status(1)->get());
+		$rental_count = count(rental::wherecase_status(1)->get());
+		view()->share(compact('problem_count'));
+		view()->share(compact('complain_count'));
+		view()->share(compact('todo_count'));
+		view()->share(compact('freezer_count'));
+		view()->share(compact('rental_count'));
+	}
+
 
 	/**
 	 * Display a listing of the resource.

@@ -11,7 +11,9 @@
 
     {!! Form::close() !!}
 
-    {!! delete_form(['vendors.destroy', $vendor->id]) !!}
+    {!! Form::model($vendor, ['url' => '/vendors/'.$vendor->id, 'method'=> 'Delete' ]) !!}
+    {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
+    {!! Form::close() !!}
 
 
 </div>

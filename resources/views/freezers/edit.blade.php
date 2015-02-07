@@ -21,7 +21,9 @@
 
     {!! Form::close() !!}
 
-    {!! delete_form(['freezers.destroy', $freezer->id]) !!}
+    {!! Form::model($freezer, ['url' => '/freezers/'.$freezer->id, 'method'=> 'Delete' ]) !!}
+    {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
+    {!! Form::close() !!}
 
 
 </div>

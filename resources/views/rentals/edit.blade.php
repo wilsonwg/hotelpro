@@ -21,7 +21,9 @@
 
     {!! Form::close() !!}
 
-    {!! delete_form(['rentals.destroy', $rental->id]) !!}
+    {!! Form::model($rental, ['url' => '/rentals/'.$rental->id, 'method'=> 'Delete' ]) !!}
+    {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
+    {!! Form::close() !!}
 
 
 </div>

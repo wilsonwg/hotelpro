@@ -19,7 +19,9 @@
 
     {!! Form::close() !!}
 
-    {!! delete_form(['todos.destroy', $todo->id]) !!}
+    {!! Form::model($todo, ['url' => '/todos/'.$todo->id, 'method'=> 'Delete' ]) !!}
+    {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
+    {!! Form::close() !!}
 
 
 </div>
