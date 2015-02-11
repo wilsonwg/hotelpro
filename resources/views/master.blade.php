@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta http-equiv="refresh" content="60" >
+
     <link rel="shortcut icon" href="http://faviconist.com/icons/54f8e8f9ce0f77929f1ff72a59fc33c9/favicon.ico" />
 
     <title>Hotel Pro</title>
